@@ -3,7 +3,7 @@
 
 ## 项目初始化
 1.配置环境
-  * 设置go module: >$ export GO111MODULE=on
+  * 设置go module: `$ export GO111MODULE=on`
   * 设置代理: export GOPROXY=https://goproxy.cn
   * 拉取依赖包: go mod download
 
