@@ -1,3 +1,8 @@
+## 框架支持
+ 1.日志文件打印 (可根据日期)
+ 2.具有MySQL,mongodb,redis连接池 (连接之后需要关闭)
+ 3.常用方法(util): 图片落盘,
+ 
 ## 项目初始化
 1.配置环境
   * 设置go module: `$ export GO111MODULE=on`
