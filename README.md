@@ -9,7 +9,7 @@
 
 2.项目运行
   * 命令运行: `$ go run main.go -c conf/dev/config.yaml`
-  * 脚本执行: 
+  * 脚本运行: 
        - `$ cd cmd`
        - `$ sh build.sh`
        - `$ sh start.sh` (为后台运行)
