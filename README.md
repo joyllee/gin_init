@@ -3,7 +3,7 @@
 
 2.具有MySQL,mongodb,redis连接池 (连接之后需要关闭)
 
-3.常用方法(util): 图片落盘,
+3.常用方法(util): 图片落盘, httpClient
  
 ## 项目初始化
 1.配置环境

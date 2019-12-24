@@ -32,6 +32,6 @@ func main() {
 
 	router.InitRouter(engine)
 	port := fmt.Sprintf(":%d", config.ServerConfig.Port)
-	logrus.Info("http server listen on port", port)
+	logrus.Info("httpclient server listen on port", port)
 	engine.Run(port)
 }

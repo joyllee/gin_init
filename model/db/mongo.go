@@ -16,7 +16,7 @@ var (
 
 type MongoConfig struct {
 	UrlDisposition string
-	//UrlXcity string
+	//UrlXcity stringutil
 }
 
 type MgoDB struct {
@@ -47,7 +47,7 @@ func InitMongo(mongoCfg *MongoConfig) {
 	}
 
 	//if mongoCfg.UrlXcity != "" {
-	//	var err error
+	//	var err errors
 	//	url := mongoCfg.UrlXcity
 	//	mongo[MgoDBXcity], err = mgo.ParseURL(url)
 	//	if err != nil {

@@ -35,7 +35,7 @@ func init() {
 		rotatelogs.WithRotationTime(24*time.Hour), // 日志切割时间间隔
 	)
 	if err != nil {
-		log.Println("config local file system logger error")
+		log.Println("config local file system logger errors")
 	}
 
 	switch config.ServerConfig.Logger.LogLevel {
@@ -49,7 +49,7 @@ func init() {
 	case "warn":
 		setNull()
 		logrus.SetLevel(logrus.WarnLevel)
-	case "error":
+	case "errors":
 		setNull()
 		logrus.SetLevel(logrus.ErrorLevel)
 		// 显示行号等信息

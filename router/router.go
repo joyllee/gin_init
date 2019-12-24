@@ -6,5 +6,5 @@ import (
 )
 
 func InitRouter(engine *gin.Engine) {
-	engine.GET("/welcome", demo.HWord)
+	engine.POST("/welcome", demo.HWord)
 }

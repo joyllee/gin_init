@@ -1,7 +1,7 @@
-package error
+package errors
 
 const (
-	// common error codes, keep same with http status code
+	// common errors codes, keep same with httpclient status code
 	ECodeOK             = 200
 	ECodeBadParam       = 400
 	ECodeNotFound       = 404
