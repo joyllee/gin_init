@@ -7,7 +7,7 @@ import (
 	"local/gin_init/common/config"
 	"local/gin_init/middleware/sessionctx"
 	"local/gin_init/router"
-	_ "local/gin_init/util/logger"
+	_ "local/gin_init/utils/logger"
 )
 
 func main() {

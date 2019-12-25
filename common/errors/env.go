@@ -1,10 +1,11 @@
 package errors
+
 import (
 	"bytes"
 	"errors"
 	"flag"
 	"fmt"
-	"local/gin_init/util/stringutil"
+	"local/gin_init/utils"
 	"os"
 	"path/filepath"
 	"runtime"
@@ -83,9 +84,9 @@ func getAppPath() (appPath string) {
 			minLen = 3
 		}
 		for {
-			if stringutil.IsExist(filepath.Join(appPath, "config")) ||
-				stringutil.IsExist(filepath.Join(appPath, "main.go")) ||
-				stringutil.IsExist(filepath.Join(appPath, "controllers")) {
+			if utils.IsExist(filepath.Join(appPath, "config")) ||
+				utils.IsExist(filepath.Join(appPath, "main.go")) ||
+				utils.IsExist(filepath.Join(appPath, "controllers")) {
 				return
 			} else {
 				if len(appPath) <= minLen {

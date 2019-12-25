@@ -6,12 +6,12 @@ import (
 	"github.com/sirupsen/logrus"
 	"io/ioutil"
 	"local/gin_init/common/errors"
-	"local/gin_init/util/httpclient"
+	"local/gin_init/utils"
 	"net/http"
 )
 
 type CallClient struct {
-	httpclient.HttpClient
+	utils.HttpClient
 	Host string
 	Uri  string
 }

@@ -1,4 +1,4 @@
-package stringutil
+package utils
 
 import (
 	"crypto/md5"
