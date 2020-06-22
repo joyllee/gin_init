@@ -1,20 +1,8 @@
 mode: debug
-port: 8099
+port: 9099
 
 logger:
   loglevel: debug
   logdir: /opt/log
-  logfilename: demo.log
+  logfilename: init.log
   logformat: text
-
-redis:
-  mastername: ""
-  sentineladdrs: ["127.0.0.1:6379"]
-  password: "testredis"
-  db: 0
-
-mysql:
-  urldisposition: devuser:devuser@tcp(127.0.0.1:3306)/demo
-
-mongo:
-  urldisposition: mongodb://127.0.0.1:27017/demo
