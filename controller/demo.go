@@ -2,12 +2,13 @@ package controller
 
 import (
 	"github.com/gin-gonic/gin"
+	"github.com/joyllee/blocks"
 	"github.com/joyllee/blocks/http_pool"
-	"github.com/joyllee/blocks/logger"
 	"github.com/valyala/fasthttp"
 )
 
-func HWord(c *gin.Context)  {
+func HWord(c *gin.Context) {
+	ctx := blocks.NewHTTPContext()
 	http_pool.InitClient(3)
 	req, res := fasthttp.AcquireRequest(), fasthttp.AcquireResponse()
 	defer func() {
@@ -23,8 +24,9 @@ func HWord(c *gin.Context)  {
 
 	err := http_pool.Client().Do(req, res)
 	if err != nil {
-		logger.Error(err)
-		c.JSON(200,gin.H{"message":"error"})
+		ctx.Error(err)
+		c.JSON(200, gin.H{"message": "error"})
 	}
-	logger.Info(string(res.Body()))
+	ctx.Info(string(res.Body()))
 }
+

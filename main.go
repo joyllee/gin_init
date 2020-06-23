@@ -3,8 +3,9 @@ package main
 import (
 	"fmt"
 	"github.com/gin-gonic/gin"
+	"github.com/joyllee/blocks/config"
 	"github.com/joyllee/blocks/logger"
-	"local/gin_init/router"
+	"github.com/joyllee/gin_init/router"
 )
 
 func main() {
@@ -14,7 +15,6 @@ func main() {
 
 	router.InitRouter(engine)
 
-	port := fmt.Sprintf(":%d", logger.ServerConfig.Port)
-	logger.Info("httpclient server listen on port", port)
+	port := fmt.Sprintf(":%d", config.ServerConfig.Port)
 	engine.Run(port)
 }

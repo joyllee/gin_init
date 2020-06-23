@@ -1,8 +1,13 @@
 mode: debug
-port: 9099
+port: 7777
 
 logger:
   loglevel: debug
   logdir: /opt/log
   logfilename: init.log
   logformat: text
+
+kafka:
+  addresses: ["127.0.0.1:9092"]
+  consumergroupid: test
+  consumeroffsetsinitial: newest
